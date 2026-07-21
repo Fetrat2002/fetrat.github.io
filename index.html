@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Fetrat | Links & Kontakt</title>
 
   <style>
@@ -87,7 +88,10 @@
       font-weight: bold;
       text-decoration: none;
       cursor: pointer;
-      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -105,6 +109,14 @@
       background: #111827;
     }
 
+    .telegram-button {
+      background: #229ed9 !important;
+    }
+
+    .telegram-button:hover {
+      background: #1788bd !important;
+    }
+
     .content-card {
       display: none;
       animation: fadeIn 0.3s ease;
@@ -119,11 +131,18 @@
       font-size: 26px;
     }
 
+    .contact-text {
+      color: #4b5563;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0 0 18px;
+    }
+
     .contact-box {
       background: #f3f4f6;
       border-radius: 18px;
       padding: 16px;
-      margin: 12px 0;
+      margin: 12px 0 18px;
       text-align: left;
     }
 
@@ -164,6 +183,7 @@
         opacity: 0;
         transform: translateY(8px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -194,18 +214,39 @@
 
 <body>
   <main class="container">
+
     <section class="profile-card">
       <div class="avatar">F</div>
 
       <h1>Fetrat</h1>
+
       <p class="subtitle">
-        Willkommen auf meiner persönlichen Seite. Hier findest du meine sozialen Medien, Kontaktmöglichkeiten und Unterstützungsmöglichkeiten.
+        Willkommen auf meiner persönlichen Seite. Hier findest du meine
+        sozialen Medien, Kontaktmöglichkeiten und Unterstützungsmöglichkeiten.
       </p>
 
       <div class="menu">
-        <button id="btn-social" class="active" onclick="showSection('social')">📱 Social</button>
-        <button id="btn-kontakt" onclick="showSection('kontakt')">✉️ Kontakt</button>
-        <button id="btn-spenden" onclick="showSection('spenden')">❤️ Spenden</button>
+        <button
+          id="btn-social"
+          class="active"
+          onclick="showSection('social')"
+        >
+          📱 Social
+        </button>
+
+        <button
+          id="btn-kontakt"
+          onclick="showSection('kontakt')"
+        >
+          ✉️ Kontakt
+        </button>
+
+        <button
+          id="btn-spenden"
+          onclick="showSection('spenden')"
+        >
+          ❤️ Spenden
+        </button>
       </div>
     </section>
 
@@ -213,26 +254,69 @@
       <h2>Soziale Medien</h2>
 
       <div class="links">
-        <a class="link-button" href="https://instagram.com/fetrat_h_r" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a class="link-button" href="https://tiktok.com/@fetratdaily" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a class="link-button" href="https://youtube.com/@FetratSportsIQ" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a class="link-button" href="https://www.linkedin.com/in/fetratullah-rasuly-3ba9b0357" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a
+          class="link-button"
+          href="https://instagram.com/fetrat_h_r"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          class="link-button"
+          href="https://tiktok.com/@fetratdaily"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok
+        </a>
+
+        <a
+          class="link-button"
+          href="https://youtube.com/@FetratSportsIQ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube
+        </a>
+
+        <a
+          class="link-button"
+          href="https://www.linkedin.com/in/fetratullah-rasuly-3ba9b0357"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
       </div>
 
-      <p class="small">Folge mir für mehr Content und Updates 😄</p>
+      <p class="small">
+        Folge mir für mehr Content und Updates 😄
+      </p>
     </section>
 
     <section id="kontakt" class="content-card">
       <h2>Kontakt</h2>
 
-      <div class="contact-box">
-        <span>E-Mail</span>
-        <strong>Fetrathazratn@gmail.com</strong>
+      <p class="contact-text">
+        Für Fragen schreib mir gerne auf Telegram.
+      </p>
+
+      <div class="links">
+        <a
+          class="link-button telegram-button"
+          href="https://t.me/fetratHR"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          💬 Auf Telegram schreiben
+        </a>
       </div>
 
       <div class="contact-box">
-        <span>Telefon</span>
-        <strong>0000</strong>
+        <span>E-Mail</span>
+        <strong>Fetrathazratn@gmail.com</strong>
       </div>
     </section>
 
@@ -240,28 +324,48 @@
       <h2>Spenden</h2>
 
       <div class="links">
-        <a class="link-button" href="https://paypal.me/yourcentwillhelp" target="_blank" rel="noopener noreferrer">Mit PayPal spenden</a>
+        <a
+          class="link-button"
+          href="https://paypal.me/yourcentwillhelp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Mit PayPal spenden
+        </a>
       </div>
 
-      <p class="small">Danke für deine Unterstützung. Jede Hilfe bedeutet mir viel ❤️</p>
+      <p class="small">
+        Danke für deine Unterstützung. Jede Hilfe bedeutet mir viel ❤️
+      </p>
     </section>
 
     <footer>
       © 2026 Fetrat
     </footer>
+
   </main>
 
   <script>
     function showSection(id) {
       const sections = ["social", "kontakt", "spenden"];
 
-      sections.forEach(section => {
-        document.getElementById(section).classList.remove("show");
-        document.getElementById("btn-" + section).classList.remove("active");
+      sections.forEach(function (section) {
+        document
+          .getElementById(section)
+          .classList.remove("show");
+
+        document
+          .getElementById("btn-" + section)
+          .classList.remove("active");
       });
 
-      document.getElementById(id).classList.add("show");
-      document.getElementById("btn-" + id).classList.add("active");
+      document
+        .getElementById(id)
+        .classList.add("show");
+
+      document
+        .getElementById("btn-" + id)
+        .classList.add("active");
     }
   </script>
 </body>
