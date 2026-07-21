@@ -65,8 +65,16 @@
     .subtitle {
       font-size: 17px;
       color: #4b5563;
-      margin: 0 0 24px;
+      margin: 0 0 12px;
       line-height: 1.5;
+    }
+
+    .persian-text {
+      direction: rtl;
+      font-size: 16px;
+      color: #4b5563;
+      line-height: 1.8;
+      margin: 0 0 24px;
     }
 
     .menu {
@@ -93,9 +101,10 @@
         background 0.2s ease,
         box-shadow 0.2s ease;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 4px;
     }
 
     button:hover,
@@ -107,6 +116,12 @@
 
     button.active {
       background: #111827;
+    }
+
+    .button-persian {
+      font-size: 13px;
+      font-weight: normal;
+      direction: rtl;
     }
 
     .telegram-button {
@@ -127,14 +142,31 @@
     }
 
     h2 {
-      margin: 0 0 18px;
+      margin: 0 0 8px;
       font-size: 26px;
+    }
+
+    .heading-persian {
+      display: block;
+      direction: rtl;
+      font-size: 18px;
+      font-weight: normal;
+      color: #4b5563;
+      margin-bottom: 20px;
     }
 
     .contact-text {
       color: #4b5563;
       font-size: 16px;
       line-height: 1.6;
+      margin: 0 0 8px;
+    }
+
+    .contact-persian {
+      direction: rtl;
+      color: #4b5563;
+      font-size: 16px;
+      line-height: 1.8;
       margin: 0 0 18px;
     }
 
@@ -142,7 +174,7 @@
       background: #f3f4f6;
       border-radius: 18px;
       padding: 16px;
-      margin: 12px 0 18px;
+      margin: 18px 0 0;
       text-align: left;
     }
 
@@ -168,7 +200,15 @@
       font-size: 14px;
       color: #6b7280;
       margin-top: 18px;
-      line-height: 1.5;
+      line-height: 1.6;
+    }
+
+    .small-persian {
+      direction: rtl;
+      font-size: 14px;
+      color: #6b7280;
+      margin-top: 8px;
+      line-height: 1.8;
     }
 
     footer {
@@ -176,6 +216,7 @@
       color: #6b7280;
       font-size: 13px;
       margin-top: 16px;
+      line-height: 1.7;
     }
 
     @keyframes fadeIn {
@@ -222,7 +263,13 @@
 
       <p class="subtitle">
         Willkommen auf meiner persönlichen Seite. Hier findest du meine
-        sozialen Medien, Kontaktmöglichkeiten und Unterstützungsmöglichkeiten.
+        sozialen Medien, Kontaktmöglichkeiten und Möglichkeiten,
+        meine Arbeit zu unterstützen.
+      </p>
+
+      <p class="persian-text" dir="rtl">
+        به صفحه شخصی من خوش آمدید. در اینجا می‌توانید شبکه‌های اجتماعی،
+        راه‌های ارتباطی و امکان حمایت از فعالیت‌های من را پیدا کنید.
       </p>
 
       <div class="menu">
@@ -231,27 +278,33 @@
           class="active"
           onclick="showSection('social')"
         >
-          📱 Social
+          <span>📱 Soziale Medien</span>
+          <span class="button-persian" dir="rtl">شبکه‌های اجتماعی</span>
         </button>
 
         <button
           id="btn-kontakt"
           onclick="showSection('kontakt')"
         >
-          ✉️ Kontakt
+          <span>✉️ Kontakt</span>
+          <span class="button-persian" dir="rtl">ارتباط</span>
         </button>
 
         <button
-          id="btn-spenden"
-          onclick="showSection('spenden')"
+          id="btn-unterstuetzung"
+          onclick="showSection('unterstuetzung')"
         >
-          ❤️ Spenden
+          <span>❤️ Unterstützung</span>
+          <span class="button-persian" dir="rtl">حمایت</span>
         </button>
       </div>
     </section>
 
     <section id="social" class="content-card show">
       <h2>Soziale Medien</h2>
+      <span class="heading-persian" dir="rtl">
+        شبکه‌های اجتماعی
+      </span>
 
       <div class="links">
         <a
@@ -260,7 +313,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Instagram
+          <span>Instagram</span>
+          <span class="button-persian" dir="rtl">اینستاگرام</span>
         </a>
 
         <a
@@ -269,7 +323,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          TikTok
+          <span>TikTok</span>
+          <span class="button-persian" dir="rtl">تیک‌تاک</span>
         </a>
 
         <a
@@ -278,7 +333,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          YouTube
+          <span>YouTube</span>
+          <span class="button-persian" dir="rtl">یوتیوب</span>
         </a>
 
         <a
@@ -287,20 +343,32 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          LinkedIn
+          <span>LinkedIn</span>
+          <span class="button-persian" dir="rtl">لینکدین</span>
         </a>
       </div>
 
       <p class="small">
-        Folge mir für mehr Content und Updates 😄
+        Folge mir für mehr Inhalte und Neuigkeiten 😄
+      </p>
+
+      <p class="small-persian" dir="rtl">
+        برای دیدن مطالب و خبرهای بیشتر، من را دنبال کنید 😄
       </p>
     </section>
 
     <section id="kontakt" class="content-card">
       <h2>Kontakt</h2>
+      <span class="heading-persian" dir="rtl">
+        ارتباط
+      </span>
 
       <p class="contact-text">
-        Für Fragen schreib mir gerne auf Telegram.
+        Für Fragen kannst du mir gerne auf Telegram schreiben.
+      </p>
+
+      <p class="contact-persian" dir="rtl">
+        برای پرسش‌ها می‌توانید از طریق تلگرام برای من پیام بفرستید.
       </p>
 
       <div class="links">
@@ -310,18 +378,34 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          💬 Auf Telegram schreiben
+          <span>💬 Auf Telegram schreiben</span>
+          <span class="button-persian" dir="rtl">
+            ارسال پیام در تلگرام
+          </span>
         </a>
       </div>
 
       <div class="contact-box">
-        <span>E-Mail</span>
+        <span>E-Mail / ایمیل</span>
         <strong>Fetrathazratn@gmail.com</strong>
       </div>
     </section>
 
-    <section id="spenden" class="content-card">
-      <h2>Spenden</h2>
+    <section id="unterstuetzung" class="content-card">
+      <h2>Unterstützung meiner Arbeit</h2>
+      <span class="heading-persian" dir="rtl">
+        حمایت از فعالیت‌های من
+      </span>
+
+      <p class="contact-text">
+        Mit deiner Unterstützung hilfst du mir dabei, weiterhin Inhalte,
+        Informationen und neue Projekte bereitzustellen.
+      </p>
+
+      <p class="contact-persian" dir="rtl">
+        با حمایت شما می‌توانم به تولید محتوا، ارائه اطلاعات مفید
+        و انجام پروژه‌های جدید ادامه دهم.
+      </p>
 
       <div class="links">
         <a
@@ -330,24 +414,36 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Mit PayPal spenden
+          <span>❤️ Meine Arbeit mit PayPal unterstützen</span>
+          <span class="button-persian" dir="rtl">
+            حمایت از فعالیت من با پی‌پال
+          </span>
         </a>
       </div>
 
       <p class="small">
-        Danke für deine Unterstützung. Jede Hilfe bedeutet mir viel ❤️
+        Vielen Dank für deine Unterstützung. Jede Hilfe bedeutet mir viel ❤️
+      </p>
+
+      <p class="small-persian" dir="rtl">
+        از حمایت شما بسیار سپاسگزارم. هرگونه کمک برای من ارزشمند است ❤️
       </p>
     </section>
 
     <footer>
-      © 2026 Fetrat
+      <div>© 2026 Fetrat</div>
+      <div dir="rtl">تمام حقوق محفوظ است</div>
     </footer>
 
   </main>
 
   <script>
     function showSection(id) {
-      const sections = ["social", "kontakt", "spenden"];
+      const sections = [
+        "social",
+        "kontakt",
+        "unterstuetzung"
+      ];
 
       sections.forEach(function (section) {
         document
